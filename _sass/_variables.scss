@@ -1,0 +1,25 @@
+$enable-shadows: true;
+$enable-transitions: false;
+$enable-print-styles: false;
+
+$blue: #3490dc;
+$yellow: #f3c43d;
+
+$primary: $yellow;
+$dark: #262929;
+
+$link-color: #a68219;
+
+$component-active-bg: $blue;
+
+$body-color: $dark;
+
+$headings-font-weight: 900;
+$headings-margin-bottom: 1rem;
+
+$navbar-light-color: rgba($body-color, .8);
+$navbar-light-hover-color: $body-color;
+
+$tooltip-bg: $dark;
+
+$btn-font-weight: 500;

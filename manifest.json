@@ -1,0 +1,20 @@
+{
+    "short_name": "NEW",
+    "name": "New Era Wrestling",
+    "icons": [
+        {
+            "sizes": "192x192",
+            "src": "/img/icon-192.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "512x512",
+            "src": "/img/icon-512.png",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/?utm_source=pwa",
+    "background_color": "#262929",
+    "display": "minimal",
+    "theme_color": "#f3c43d"
+}
