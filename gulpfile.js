@@ -1,21 +1,25 @@
 'use strict';
 
-const gulp = require('gulp');
-const sass = require('gulp-sass');
+let gulp = require('gulp');
+let sass = require('gulp-sass');
+
+let config = {
+    sass: {
+        includePaths: ['node_modules'],
+        outputStyle: 'compressed'
+    }
+};
 
 gulp.task('sass', () => {
-    gulp.src('_sass/app.scss')
-        .pipe(sass({
-            includePaths: ['node_modules'],
-            outputStyle: 'compressed'
-        }).on('error', sass.logError))
+    return gulp.src('_sass/app.scss')
+        .pipe(sass(config.sass).on('error', sass.logError))
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('build', ['sass']);
+gulp.task('build', gulp.series('sass'));
 
 gulp.task('watch', () => {
-    gulp.watch('_sass/**/*.scss', ['sass']);
+    return gulp.watch('_sass/**/*.scss', gulp.series('sass'));
 });
 
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', gulp.series('build', 'watch'));
