@@ -26,6 +26,11 @@
   }
 }
 
-.constrain {
+.container {
   max-width: 30rem;
+}
+
+.btn:active {
+  position: relative;
+  top: .0625rem;
 }

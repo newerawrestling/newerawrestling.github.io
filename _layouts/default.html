@@ -4,56 +4,96 @@
 <html lang="en">
     <head>
         {% include analytics.html %}
+        <link href="https://kit.fontawesome.com" rel="preconnect" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="{{ page.excerpt }}" />
-        <meta name="msapplication-config" content="{{ '/browserconfig.xml' | relative_url }}" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
         <title>{{ page.title }}</title>
-        <link href="{{ '/favicon.ico' | relative_url }}" rel="icon" />
-        <link href="{{ '/manifest.json' | relative_url }}" rel="manifest" />
-        <link href="{{ '/css/app.css' | relative_url }}" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/6fce1e3908.js"></script>
+        <link href="/favicon.ico" rel="icon" />
+        <link href="/manifest.json" rel="manifest" />
+        <link href="/css/app.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/fd1db43cff.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand navbar-light bg-primary">
-            <a class="navbar-brand" href="{{ '/' | relative_url }}">
-                <span class="navbar-brand-text">New Era Wrestling</span>
-            </a>
-            <div class="collapse navbar-collapse" id="app-navbar-content">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://twitter.com/newerawrestling" rel="external noopener noreferrer" target="_blank" title="New Era Wrestling on Twitter">
-                            <span class="fab fa-fw fa-lg fa-twitter"></span>
-                            <span class="sr-only">New Era Wrestling on Twitter</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.facebook.com/newerawrestlinguk" rel="external noopener noreferrer" target="_blank" title="New Era Wrestling on Facebook">
-                            <span class="fab fa-fw fa-lg fa-facebook-f"></span>
-                            <span class="sr-only">New Era Wrestling on Facebook</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.instagram.com/newerawrestling/" rel="external noopener noreferrer" target="_blank" title="New Era Wrestling on Instagram">
-                            <span class="fab fa-fw fa-lg fa-instagram"></span>
-                            <span class="sr-only">New Era Wrestling on Instagram</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.youtube.com/channel/UCnBtFbY3scWA4HJyVeq0eXQ?sub_confirmation=1" rel="external noopener noreferrer" target="_blank" title="New Era Wrestling on YouTube">
-                            <span class="fab fa-fw fa-lg fa-youtube"></span>
-                            <span class="sr-only">New Era Wrestling on YouTube</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <header class="bg-primary" role="banner">
+            <nav class="navbar navbar-expand navbar-light">
+                <a class="navbar-brand" href="/">
+                    <span class="navbar-brand-text">New Era Wrestling</span>
+                </a>
+                <div class="collapse navbar-collapse" id="app-navbar-content">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://twitter.com/newerawrestling" rel="external noopener noreferrer" target="_blank" title="New Era Wrestling on Twitter">
+                                <span class="fab fa-fw fa-lg fa-twitter"></span>
+                                <span class="sr-only">New Era Wrestling on Twitter</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.facebook.com/newerawrestlinguk" rel="external noopener noreferrer" target="_blank" title="New Era Wrestling on Facebook">
+                                <span class="fab fa-fw fa-lg fa-facebook-f"></span>
+                                <span class="sr-only">New Era Wrestling on Facebook</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/newerawrestling/" rel="external noopener noreferrer" target="_blank" title="New Era Wrestling on Instagram">
+                                <span class="fab fa-fw fa-lg fa-instagram"></span>
+                                <span class="sr-only">New Era Wrestling on Instagram</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.youtube.com/channel/UCnBtFbY3scWA4HJyVeq0eXQ?sub_confirmation=1" rel="external noopener noreferrer" target="_blank" title="New Era Wrestling on YouTube">
+                                <span class="fab fa-fw fa-lg fa-youtube"></span>
+                                <span class="sr-only">New Era Wrestling on YouTube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <main class="py-5" role="main">
             <div class="container">
-                <div class="mx-auto constrain">
-                    {{ content }}
-                </div>
+                {{ content }}
             </div>
         </main>
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "SportsOrganization",
+                "email": "info@newerawrestling.co.uk",
+                "founder": {
+                    "@type": "Person",
+                    "givenName": "Martin",
+                    "familyName": "Bean"
+                },
+                "foundingDate": "2007-08-10",
+                "foundingLocation": {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Darlington",
+                        "addressCountry": "GB"
+                    }
+                },
+                "location": {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Newcastle upon Tyne",
+                        "addressCountry": "GB"
+                    }
+                },
+                "logo": "/img/icon-512.png",
+                "mainEntityOfPage": "https://www.newerawrestling.co.uk",
+                "name": "New Era Wrestling",
+                "sameAs": [
+                    "https://twitter.com/newerawrestling",
+                    "https://www.facebook.com/newerawrestlinguk",
+                    "https://www.instagram.com/newerawrestling/",
+                    "https://www.youtube.com/channel/UCnBtFbY3scWA4HJyVeq0eXQ"
+                ],
+                "url": "https://www.newerawrestling.co.uk"
+            }
+        </script>
     </body>
 </html>
